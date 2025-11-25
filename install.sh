@@ -15,7 +15,7 @@ chmod +x monitor.sh
 mkdir -p "$APP_DIR"
 
 #Билдим файлы
-sudo go build -o app
+sudo go build -o app -buildvcs=false
 
 
 
