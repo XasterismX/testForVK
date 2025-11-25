@@ -2,7 +2,7 @@
 # Проверяет доступность веб-сервера по HTTP, логирует результат и перезапускает при сбое
 APP_PORT=8080
 APP_PATH="./app" #путь к бинарному файлу
-LOG="/var/log/test_server_monitoring" # Путь к логу
+LOG="/var/log/test_server_monitoring.log" # Путь к логу
 URL="http://localhost:$APP_PORT" #путь к ресурсу
 
 #Функция логирования

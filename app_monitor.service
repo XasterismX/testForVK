@@ -3,7 +3,7 @@ Description=Мониторинг веб-приложения
 
 [Service]
 Type=simple
-ExecStart=./monitor.sh
+ExecStart=/home/klipper/testForVK/monitor.sh
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=app-monitor
