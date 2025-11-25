@@ -15,23 +15,23 @@ chmod +x monitor.sh
 mkdir -p "$APP_DIR"
 
 #Билдим файлы
-go build -o app
+sudo go build -o app
 
 
 
 # Копируем файлы (предполагается, что hello и monitor.sh лежат в текущей папке)
-cp app "$BIN_PATH"
-cp monitor.sh "$MONITOR_SCRIPT"
+sudo cp app "$BIN_PATH"
+sudo cp monitor.sh "$MONITOR_SCRIPT"
 
 # Делаем исполняемым
-chmod +x "$BIN_PATH" "$MONITOR_SCRIPT"
+sudo chmod +x "$BIN_PATH" "$MONITOR_SCRIPT"
 
 # Копируем unit-файлы systemd
-cp app_monitor.service /etc/systemd/system/
-cp app_monitor.timer /etc/systemd/system/
+sudo cp app_monitor.service /etc/systemd/system/
+sudo cp app_monitor.timer /etc/systemd/system/
 
 # Перезагружаем демон и включить таймер
-systemctl daemon-reload
-systemctl enable --now app_monitor.timer
+sudo systemctl daemon-reload
+sudo systemctl enable --now app_monitor.timer
 
 echo "Установка завершена. Мониторинг запущен."
