@@ -1,0 +1,9 @@
+[Unit]
+Description=Мониторинг веб-приложения
+
+[Service]
+Type=simple
+ExecStart=./monitor.sh
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=app-monitor

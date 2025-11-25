@@ -1,0 +1,10 @@
+[Unit]
+Description=Таймер для мониторинга веб-приложения
+
+[Timer]
+OnBootSec=10sec
+OnUnitActiveSec=30sec
+Unit=app_monitor.service
+
+[Install]
+WantedBy=multi-user.target
