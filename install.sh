@@ -8,6 +8,8 @@ MONITOR_SCRIPT="$APP_DIR/monitor.sh"
 sudo apt update
 sudo apt install golang-go
 
+#Права на запуск мониторинга
+chmod +x monitor.sh
 
 # Создаем директорию
 mkdir -p "$APP_DIR"
